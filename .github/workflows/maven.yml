@@ -13,10 +13,8 @@ on:
   pull_request:
     branches: [ "main" ]
 
-name: AzureSpringCloud
-env:
-  GROUP: <resource group name>
-  SERVICE_NAME: <service instance name>
+name: AzureWebApp
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
