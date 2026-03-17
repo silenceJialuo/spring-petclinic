@@ -1,0 +1,19 @@
+{
+    "version": 1,
+    "hooks": {
+        "userPromptSubmitted": [
+            {
+                "type": "command",
+                "bash": "INPUT=$(cat); PROMPT=$(echo \"$INPUT\" | jq -r '.prompt'); echo \"User submitted prompt: $PROMPT\"",
+                "timeoutSec": 5
+            }
+        ],
+        "errorOccurred": [
+            {
+                "type": "command",
+                "bash": "INPUT=$(cat); ERROR=$(echo \"$INPUT\" | jq -r '.error.message'); echo \"Error occurred: $ERROR\"",
+                "timeoutSec": 5
+            }
+        ]
+    }
+}

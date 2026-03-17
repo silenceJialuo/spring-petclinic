@@ -1,0 +1,33 @@
+{
+    "version": 1,
+    "hooks": {
+        "userPromptSubmitted": [
+            {
+                "type": "command",
+                "bash": ".github/hooks/scripts/log-prompt.sh",
+                "timeoutSec": 10
+            }
+        ],
+        "preToolUse": [
+            {
+                "type": "command",
+                "bash": ".github/hooks/scripts/check-tool-safety.sh",
+                "timeoutSec": 15
+            }
+        ],
+        "postToolUse": [
+            {
+                "type": "command",
+                "bash": ".github/hooks/scripts/log-tool-result.sh",
+                "timeoutSec": 10
+            }
+        ],
+        "errorOccurred": [
+            {
+                "type": "command",
+                "bash": ".github/hooks/scripts/log-error.sh",
+                "timeoutSec": 10
+            }
+        ]
+    }
+}

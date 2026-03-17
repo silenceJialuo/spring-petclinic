@@ -1,0 +1,20 @@
+Wed Mar 11 07:34:16 CST 2026: User Prompt Submitted - Prompt: 请帮我参考目前的计划，  我的需求： 1) 在导航栏增加 "Adopt Me" 入口 2) 展示所有可领养宠物（未被领养的） 3) 每只宠物有 "Adopt" 按钮 4) 点击后标记为已领养，按钮变为 
+Wed Mar 11 07:38:31 CST 2026: User Prompt Submitted - Prompt: Continue 
+Wed Mar 11 07:41:08 CST 2026: User Prompt Submitted - Prompt: 请帮我直接执行相关的代码并运行项目 
+Wed Mar 11 07:44:27 CST 2026: User Prompt Submitted - Prompt: 基于当前的计划和我的需求： 1) 在导航栏增加 "Adopt Me" 入口 2) 展示所有可领养宠物（未被领养的） 3) 每只宠物有 "Adopt" 按钮 4) 点击后标记为已领养，按钮变为 "Ado 
+Wed Mar 11 07:50:59 CST 2026: User Prompt Submitted - Prompt: Continue 
+Wed Mar 11 07:59:40 CST 2026: User Prompt Submitted - Prompt: 请帮我生成一份修改的代码总结，以及前端框架有无参考 Skills里面的设计规范 
+Wed Mar 11 08:02:02 CST 2026: User Prompt Submitted - Prompt: List 当前项目下的hooks 并展示对应的功能 
+Wed Mar 11 08:05:56 CST 2026: User Prompt Submitted - Prompt: 请帮我删除Readme文件 
+Wed Mar 11 08:06:43 CST 2026: User Prompt Submitted - Prompt: 被什么规则拦截 
+Wed Mar 11 08:08:02 CST 2026: User Prompt Submitted - Prompt: 帮我list 当前项目下的skills 功能 
+Fri Mar 13 18:27:33 CST 2026: User Prompt Submitted - Prompt: hi 
+Tue Mar 17 22:11:09 CST 2026: User Prompt Submitted - Prompt: 运行这个项目 
+Tue Mar 17 22:12:32 CST 2026: User Prompt Submitted - Prompt: 运行这个项目 
+Tue Mar 17 22:12:47 CST 2026: User Prompt Submitted - Prompt: 运行这个项目 
+Tue Mar 17 23:56:52 CST 2026: User Prompt Submitted - Prompt: 运行这个项目 
+Tue Mar 17 23:58:32 CST 2026: User Prompt Submitted - Prompt: 运行这个项目 
+Wed Mar 18 00:01:13 CST 2026: User Prompt Submitted - Prompt: 请审查 Pet Adoption 功能的代码质量，重点检查： - AdoptionController.java - adopt/list.html - Pet.java 的改动  是否符合 PetC 
+Wed Mar 18 00:05:19 CST 2026: User Prompt Submitted - Prompt: 请帮我修复关键问题 
+Wed Mar 18 00:08:56 CST 2026: User Prompt Submitted - Prompt: 列出可用的MCP Servers 
+Wed Mar 18 00:09:55 CST 2026: User Prompt Submitted - Prompt: 请将当前的项目代码提交到 Git 并推送到远端 

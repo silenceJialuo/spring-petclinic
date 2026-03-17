@@ -41,6 +41,7 @@ CREATE TABLE IF NOT EXISTS pets (
   birth_date DATE,
   type_id INT(4) UNSIGNED NOT NULL,
   owner_id INT(4) UNSIGNED,
+  adopted TINYINT(1) NOT NULL DEFAULT 0,
   INDEX(name),
   FOREIGN KEY (owner_id) REFERENCES owners(id),
   FOREIGN KEY (type_id) REFERENCES types(id)

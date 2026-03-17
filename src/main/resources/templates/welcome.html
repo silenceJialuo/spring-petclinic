@@ -4,12 +4,31 @@
 
 <body>
 
-  <h2 th:text="#{welcome}">Welcome</h2>
-  <div class="row">
-    <div class="col-md-12">
-      <img class="img-responsive" src="../static/resources/images/pets.png" th:src="@{/resources/images/pets.png}" />
+  <section class="welcome-hero">
+    <div class="welcome-hero-content">
+      <h1 th:text="#{welcomeHeroHeading}">Warm Care for Every Paw</h1>
+      <p th:text="#{welcomeHeroText}">Trusted veterinary care and a loving adoption journey in one place.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" th:href="@{/adoptions}" th:text="#{adoptMe}">Adopt Me</a>
+        <a class="btn btn-outline-secondary" th:href="@{/owners/find}" th:text="#{findOwners}">Find Owners</a>
+      </div>
     </div>
-  </div>
+    <div class="welcome-hero-image">
+      <img class="img-responsive float-pet" src="../static/resources/images/pets.png"
+        th:src="@{/resources/images/pets.png}" alt="Pets" />
+    </div>
+  </section>
+
+  <section class="welcome-features">
+    <article class="feature-card">
+      <h3 th:text="#{welcomeFeatureCareTitle}">Gentle Veterinary Care</h3>
+      <p th:text="#{welcomeFeatureCareText}">Experienced vets, preventive visits, and caring follow-ups.</p>
+    </article>
+    <article class="feature-card">
+      <h3 th:text="#{welcomeFeatureAdoptTitle}">Simple Adoption Flow</h3>
+      <p th:text="#{welcomeFeatureAdoptText}">Browse available pets and adopt with one click.</p>
+    </article>
+  </section>
 
 </body>
 

@@ -1,0 +1,37 @@
+{
+    "version": 1,
+    "hooks": {
+        "userPromptSubmitted": [
+            {
+                "type": "command",
+                "bash": "INPUT=$(cat); echo \"[Hook] User prompt submitted:\"; echo \"$INPUT\" | jq -r '.prompt' | head -c 100",
+                "powershell": "$input = [Console]::In.ReadToEnd() | ConvertFrom-Json; Write-Output '[Hook] User prompt submitted:'; Write-Output $input.prompt.Substring(0, [Math]::Min(100, $input.prompt.Length))",
+                "timeoutSec": 10
+            }
+        ],
+        "preToolUse": [
+            {
+                "type": "command",
+                "bash": "INPUT=$(cat); TOOL=$(echo \"$INPUT\" | jq -r '.toolName'); echo \"[Hook] Pre-tool: $TOOL\"; echo '{\"permissionDecision\": \"allow\"}'",
+                "powershell": "$input = [Console]::In.ReadToEnd() | ConvertFrom-Json; Write-Output \"[Hook] Pre-tool: $($input.toolName)\"; Write-Output '{\"permissionDecision\": \"allow\"}'",
+                "timeoutSec": 15
+            }
+        ],
+        "postToolUse": [
+            {
+                "type": "command",
+                "bash": "INPUT=$(cat); TOOL=$(echo \"$INPUT\" | jq -r '.toolName'); RESULT=$(echo \"$INPUT\" | jq -r '.toolResult.resultType'); echo \"[Hook] Post-tool: $TOOL - $RESULT\"",
+                "powershell": "$input = [Console]::In.ReadToEnd() | ConvertFrom-Json; Write-Output \"[Hook] Post-tool: $($input.toolName) - $($input.toolResult.resultType)\"",
+                "timeoutSec": 10
+            }
+        ],
+        "errorOccurred": [
+            {
+                "type": "command",
+                "bash": "INPUT=$(cat); ERROR=$(echo \"$INPUT\" | jq -r '.error.message'); echo \"[Hook] Error occurred: $ERROR\"",
+                "powershell": "$input = [Console]::In.ReadToEnd() | ConvertFrom-Json; Write-Output \"[Hook] Error occurred: $($input.error.message)\"",
+                "timeoutSec": 10
+            }
+        ]
+    }
+}

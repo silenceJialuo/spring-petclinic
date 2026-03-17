@@ -1,0 +1,13 @@
+{
+    "version": 1,
+    "hooks": {
+        "preToolUse": [
+            {
+                "type": "command",
+                "bash": "INPUT=$(cat); TOOL=$(echo \"$INPUT\" | jq -r '.toolName'); echo \"Checking tool: $TOOL\" >&2; if [[ \"$TOOL\" == *\"dangerous\"* ]]; then echo '{\"permissionDecision\": \"deny\", \"permissionDecisionReason\": \"Tool contains dangerous operations\"}'; else echo '{\"permissionDecision\": \"allow\"}'; fi",
+                "powershell": "$input = [Console]::In.ReadToEnd() | ConvertFrom-Json; Write-Host \"Checking tool: $($input.toolName)\"; if ($input.toolName -like '*dangerous*') { @{permissionDecision='deny'; permissionDecisionReason='Tool contains dangerous operations'} | ConvertTo-Json -Compress } else { @{permissionDecision='allow'} | ConvertTo-Json -Compress }",
+                "timeoutSec": 10
+            }
+        ]
+    }
+}
